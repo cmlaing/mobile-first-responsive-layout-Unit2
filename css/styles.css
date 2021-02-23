@@ -1,0 +1,103 @@
+
+/* 
+========================================================================== 
+Mobile-first Design Layout for the Responsive Layout project on TreeHouse. 
+Media Queries are for expanding the layout for larger screens.
+========================================================================== 
+*/
+
+/* Universal Attributes */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Verdana', sans-serif;
+    color: #525252;
+    text-align: center;
+    
+
+}
+
+body {
+    background-color: #fafafa;
+
+}
+
+
+/* Header */
+
+
+
+
+
+  .nav {
+    
+    min-height: 30px;
+    justify-content: space-around; 
+    text-transform: uppercase;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0.25rem auto;
+    padding: 1rem;
+    border: none;
+    
+   
+  }
+
+  li {
+    margin: 0;
+    border: none;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: #ffffff;
+
+  }
+
+  .header-image {
+    border: 0.25rem;
+    padding: 2rem;
+
+  }
+
+/* Link Styles Within Header */
+
+  .nav a {
+    text-decoration: none;
+    transition: all .5s;
+  }
+  .nav a:hover {
+    color: #f477de;
+  }
+
+/* Main */
+
+
+img {
+    
+    width: 300px;
+    padding: 3px;
+    margin: auto;
+
+
+}
+
+
+
+
+p {
+    color: #a8a8a8;
+    padding: 1rem;
+    margin: auto;
+    line-height: 1.5;
+
+
+}
+
+/* Footer */
+
+
+
+/* Media Queries */
+
+/* 768px Wide Screens */
+
+/* 1024 Wide Screens */
