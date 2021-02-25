@@ -19,7 +19,7 @@ Media Queries are for expanding the layout for larger screens.
 
 body {
     background-color: #fafafa;
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
     color: #525252;
     
 }
@@ -44,9 +44,10 @@ a {
 /* Header */
 
 header {
-  background:#ededed;
+  background:#f5f4f4;
   margin-top: 1rem;
   padding-top: 20px;
+  padding-bottom: 1rem;
 
 }
 
@@ -96,43 +97,76 @@ li {
 /* Main */
 
 
+main {
+padding: 0;
+margin: 0;
 
+}
 
 
 img {
     
-    width: 300px;
-    padding: 3px;
-    margin: auto;
+    max-width: 250px;
+    padding: 0;
+    margin: 0;
+}
 
+
+
+h3, h4 {
+  padding-top: 1rem;
+  border: 0;
+  margin: 1rem;
 
 }
 
 
 
-
 p {
     color: #a8a8a8;
-    padding: 1rem;
+    padding: 0.5rem 0.5rem;
     margin: auto;
     line-height: 1.5;
 
 
 }
 
+section {
+  padding 0;
+  margin: 0.5rem;
+
+
+}
+
+article {
+  padding: 0;
+  margin: 1rem;
+
+}
+
 /* Footer */
 
 footer {
-  background:#ededed;
+  background: #f5f4f4;
   margin-top: 1rem;
   padding-top: 1rem;
 
+}
+
+.fnav li {
+
+  background: #f5f4f4;
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Student Name and Back to Top, also uses nav class from header */
 
 .footernav {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 
