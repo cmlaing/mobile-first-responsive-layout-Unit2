@@ -10,47 +10,72 @@ Media Queries are for expanding the layout for larger screens.
 
 * {
     box-sizing: border-box;
-    font-family: 'Verdana', sans-serif;
-    color: #525252;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    
     
 
 }
 
 body {
     background-color: #fafafa;
+    font-family: 'Verdana', sans-serif;
+    color: #525252;
+    
+}
+
+a {
+  text-decoration: none;
+  transition: all .5s;
+}
+.nav a:hover {
+  color: #f477de;
+}
+
+
+
+.wrapper {
+  text-align: center;
+  margin: 0px;
 
 }
 
 
 /* Header */
 
+header {
+  background:#ededed;
+  margin-top: 1rem;
+  padding-top: 20px;
+
+}
 
 
 
-
-  .nav {
+.nav {
     
-    min-height: 30px;
-    justify-content: space-around; 
-    text-transform: uppercase;
-    font-weight: 700;
-    list-style-type: none;
-    margin: 0.25rem auto;
-    padding: 1rem;
-    border: none;
-    
-   
-  }
+  min-height: 30px;
+  justify-content: space-around; 
+  text-transform: uppercase;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0.25rem auto;
+  padding: 1rem;
+  border: none;
+  
+ 
+}
 
-  li {
-    margin: 0;
-    border: none;
-    padding: 1rem;
-    font-size: 0.9rem;
-    background: #ffffff;
+li {
+  margin: 0;
+  border: 2px solid #ededed;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #ffffff;
 
-  }
+}
+
+
 
   .header-image {
     border: 0.25rem;
@@ -69,6 +94,9 @@ body {
   }
 
 /* Main */
+
+
+
 
 
 img {
@@ -93,6 +121,62 @@ p {
 }
 
 /* Footer */
+
+footer {
+  background:#ededed;
+  margin-top: 1rem;
+  padding-top: 1rem;
+
+}
+
+/* Student Name and Back to Top, also uses nav class from header */
+
+.footernav {
+  width: 100%;
+}
+
+
+
+.fnav {
+  border-top: #525252 dashed 1px;
+  display: flex;
+  flex-wrap: nowrap; /* should make it so they stay on one line */
+  justify-content: space-between;
+  font-weight: 700;
+  
+  text-align: justify;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 1rem;
+
+}
+
+.fnav a {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .5s;
+  
+
+}
+
+.fnav a:hover {
+  color: #f477de;
+
+}
+
+
+
+/* makes the name on the left and the rest of the content to the right to fill
+the page */
+
+.nav .name {
+  display: block;
+  margin-right: auto;
+}
+
+
 
 
 
