@@ -132,7 +132,7 @@ p {
 }
 
 section {
-  padding 0;
+  padding: 0;
   margin: 0.5rem;
 
 
@@ -153,7 +153,7 @@ footer {
 
 }
 
-.fnav li {
+.fnavlist li {
 
   background: #f5f4f4;
   margin: 0;
@@ -171,7 +171,7 @@ footer {
 
 
 
-.fnav {
+.fnavlist {
   border-top: #525252 dashed 1px;
   display: flex;
   flex-wrap: nowrap; /* should make it so they stay on one line */
@@ -185,17 +185,18 @@ footer {
 
 }
 
-.fnav a {
+.fnavlist a {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
   text-decoration: none;
   transition: all .5s;
   
+  
 
 }
 
-.fnav a:hover {
+.fnavlist a:hover {
   color: #f477de;
 
 }
@@ -210,12 +211,201 @@ the page */
   margin-right: auto;
 }
 
+/* hide larger screen nav */
+
+.tabfooter {
+  display: none;
+}
+
+
+
+/* 
+========================================================================== 
+
+Media Queries 
+
+==========================================================================
+*/
+
+
+
+/* --------------------------- 768px+ Wide Screens */
+
+
+
+@media screen and (min-width: 768px){
+
+  header {
+    padding-top: 0;
+  }
+
+  /* give some space for the header from top of page */
+  header h2 {
+    padding-top: 1rem;
+
+  }
+
+ 
+
+  /* make nav list horizontal */
+
+  nav, li{
+    display: inline-flex;
+    background: #f5f4f4;
+    border: none;
+    
+  }
+
+  /*Header flexbox for profile image and paragraph about me */
+
+.flexboxhead {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse; /* reverses header image and p */
+    
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start; /* fills box vertically */
+    align-content: center;
+    padding: 0 10px;
+    
+    
+}
+
+.flexboxhead-item {
+  flex-wrap: nowrap;
+  flex-basis: 50%;
+
+  text-align: left;
+  
+  margin: 0;
+  border: 0;
+  
+
+}
+
+.header-image {
+  max-width: 50vw;
+  max-height: 30vh;
+  padding: 2px 10px;
+
+}
 
 
 
 
-/* Media Queries */
 
-/* 768px Wide Screens */
+/* Portfolio Section */
+
+#portfolio {
+  background-color: white;
+  padding: 0 10px;
+  
+
+}
+
+h3 {
+  border-top: 1rem;
+  padding-top: 1rem;
+  margin: 0;
+
+}
+
+  /* main articles are in a grid that are 2 sections wide */
+
+
+
+  .flexrow { /* main flexbox for content */
+    display: flex;
+    flex-wrap: wrap;
+      
+   
+    background-color: white;
+
+  }
+
+  .projects { /* each item in the flexrow flexbox */
+    flex-wrap: wrap;
+    flex-basis: 45%; 
+    margin: auto;
+  }
+
+  .projects img {
+    max-width: 45vw;
+  }
+
+ 
+  /* Contact Section reorganizing */
+
+  .flexboxcontact { /* items are moreinfohead, moreinfo and contactinfo */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+.moreinfohead {
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+.moreinfo {
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  padding-left: 2rem; /* squish p into centered box */
+  padding-right: 2em;
+
+}
+
+.contactinfo, .moreinfohead{ /* puts header and paragraphs on sep lines */
+  flex-wrap: nowrap;
+  flex-basis: 100%;
+  
+  padding: 20px;
+  border: 1rem;
+}
+
+  
+  /* footer now has added navigation sections Home Portfolio Contact and Skills */
+
+  .fnavlist {
+    margin: 0;
+    justify-content: flex-start;
+    width: 100%; /* this makes the bottom nav stretch the width */
+  
+  }
+
+.footernav {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-around;
+  margin: 0 auto;
+
+
+}
+.name {
+  margin-right: auto;
+  width: 100%;
+
+}
+
+.backtotop{ /* Back to Top Link gets hidden */
+  display: none;
+
+}
+.tabfooter { /* New nav with Home Portfolio Contact Skills gets shown */
+  display: flex;
+  width: 100%;
+  
+
+}
+
+
+
+}
 
 /* 1024 Wide Screens */
+
+/* Printer-Friendly Version */

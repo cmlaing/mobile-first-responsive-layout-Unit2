@@ -11,6 +11,8 @@
 
 </head>
 <body>
+
+
 <div class="wrapper">
 
     <header>
@@ -26,24 +28,30 @@
             </nav>
             <br>
 
+        <section class="flexboxhead">
+            <img class="header-image flexboxhead-item" src="images/responsive-layout-profile.png">
 
-            <img class="header-image" src="images/responsive-layout-profile.png">
-
-            <p> Hi! I'm a front-end developer who loves responsive design and css.
+            <p class="flexboxhead-item"> Hi! I'm a front-end developer who loves responsive design and css.
                 I recently finished a degree in front-end web development at Treehouse 
                 am excited to put all my skills to use! 
             </p>
-
+       
+        </section>
     </header>
 
+
+    <br>
     <main>
 
-            <section>
-                <section id="portfolio">
-                <h3>Portfolio</h3> <br>
-                
+        <br>
+            <section id="portfolio">
+                <h3> Portfolio</h3> <br>
 
-                    <article>
+                <div class="flexrow">
+
+
+
+                    <article class="projects">
                         <img src="images/portfolio-1.png"> <br>
                         <h3>Marketing Page</h3>
                         <br>
@@ -56,7 +64,7 @@
 
                    
 
-                    <article>
+                    <article class="projects">
                         <img src="images/portfolio-2.png"> <br>
                         <h3>Search Page</h3>
                         <br>
@@ -67,7 +75,7 @@
 
                    
 
-                    <article>
+                    <article class="projects">
                         <img src="images/portfolio-3.png"> <br>
                         <h3>Travel App</h3>
                         <br>
@@ -78,7 +86,7 @@
 
                    
 
-                    <article>
+                    <article class="projects">
                         <img src="images/portfolio-4.png"> <br>
                         <h3>Map of Favorite Sports</h3>
                         <br>
@@ -91,7 +99,7 @@
 
                     
 
-                    <article>
+                    <article class="projects">
                         <img src="images/portfolio-5.png"> <br>
                         <h3>Photo Gallery</h3>
                         <br>
@@ -102,7 +110,7 @@
 
                     
 
-                    <article>
+                    <article class="projects">
                         <img src="images/portfolio-6.png"> <br>
                         <h3>Calculator</h3>
                         <br>
@@ -114,7 +122,7 @@
 
                   
 
-                    <article id="skills">
+                    <article id="skills" class="projects">
                         <img src="http://placekitten.com/200/200"> <br>
                         <h3>Skills</h3>
                         <br>
@@ -123,10 +131,10 @@
                         </p>
                     </article>
 
-                
+                </div>
                 </section>
 
-            </section>
+            
 
 
 
@@ -137,22 +145,27 @@
     <footer>
 
         <div id="contact">
-            <section>
-                <h4>Contact</h4>
+            <section class="flexboxcontact">
+                <h4 class="moreinfohead">Contact</h4>
                 <br>
-                <p>If you're interested in chatting or want more information
+                <p class="moreinfo">If you're interested in chatting or want more information
                     about what I've been working on, I'd love to hear from you!
                 </p>
 
                 <br>
-                <p>Phone <strong>+1 (111) 555-1234</strong></p>
-                <p>Email <strong>email@yoursite.com</strong></p>
+                <p class="contactinfo">Phone <strong>+1 (111) 555-1234</strong></p>
+                <p class="contactinfo">Email <strong>email@yoursite.com</strong></p>
             </section>
         </div>
             <nav class="footernav">
-                    <ul class="fnav">
+                    <ul class="fnavlist">
                         <li class="name">Crystal Laing </li>
-                        <li><a href="#top">Back to Top</a></li>
+                        <li><a href="#top" class="backtotop">Back to Top</a></li>
+                        <li><a href="#top" class="tabfooter">Home</a></li>
+                        <li><a href="#portfolio" class="tabfooter">Portfolio</a></li>
+                        <li><a href="#skills" class="tabfooter">Skills</a></li>
+                        <li><a href="#contact" class="tabfooter">Contact</a></li>
+
                     </ul>
             </nav>
     </footer>
