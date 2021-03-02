@@ -11,17 +11,16 @@ Media Queries are for expanding the layout for larger screens.
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    
-    
+    padding: 0;  
 
 }
 
+/* Body */
+
 body {
     background-color: #fafafa;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Amaranth', sans-serif; 
     color: #525252;
-    
 }
 
 a {
@@ -40,8 +39,19 @@ a {
 
 }
 
+li {
+  margin: 0;
+  border: 2px solid #ededed;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #ffffff;
 
-/* Header */
+}
+
+
+/* Header = Contains 2 sections: main-nav and flexboxhead. 
+Main-nav contains name and nav. 
+Flexboxhead contains header-image and flexboxhead-item, which are the profile image and about me paragraph*/
 
 header {
   background:#f5f4f4;
@@ -50,8 +60,6 @@ header {
   padding-bottom: 1rem;
 
 }
-
-
 
 .nav {
     
@@ -67,22 +75,16 @@ header {
  
 }
 
-li {
-  margin: 0;
-  border: 2px solid #ededed;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #ffffff;
-
+.name {
+  background: #f5f4f4;
+  border: none;
 }
 
-
-
-  .header-image {
+.header-image {
     border: 0.25rem;
     padding: 2rem;
 
-  }
+}
 
 /* Link Styles Within Header */
 
@@ -94,7 +96,10 @@ li {
     color: #f477de;
   }
 
-/* Main */
+
+
+/* Main = contains Portfolio and flexbox-main.
+Within flexbox-main are projects. */
 
 
 main {
@@ -105,19 +110,15 @@ margin: 0;
 
 
 img {
-    
     max-width: 250px;
     padding: 0;
     margin: 0;
 }
 
-
-
 h3, h4 {
   padding-top: 1rem;
   border: 0;
   margin: 1rem;
-
 }
 
 
@@ -127,24 +128,29 @@ p {
     padding: 0.5rem 0.5rem;
     margin: auto;
     line-height: 1.5;
+}
 
+.flexbox-main{
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
-section {
-  padding: 0;
-  margin: 0.5rem;
-
-
-}
-
-article {
-  padding: 0;
-  margin: 1rem;
+.projects {
+  display: block;
+  margin: 20px 10px;
+  max-width: 100%;
+  padding-top: 5px;
 
 }
+
+
 
 /* Footer */
+
+/* 
+contains flexboxcontact with moreinfohead, moreinfo, and contactinfo. 
+Then flexbox-footer-nav with fname and fnavlist, and fnavlist items backtotop and full */
 
 footer {
   background: #f5f4f4;
@@ -153,37 +159,73 @@ footer {
 
 }
 
-.fnavlist li {
+.contactinfo {
 
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #525252;
+  padding: 0;
+}
+
+
+/* Student Name and Back to Top */
+
+.flexbox-footer-nav { 
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+  width: 100%;
+  padding: 0 5px;
+  
+  border-top: #525252 dashed 1px;
   background: #f5f4f4;
-  margin: 0;
-  border: 0;
-  padding: 1rem;
+
+
+}
+
+.fname { /* footer h2 student name */
+  
+  margin-left: 4px;
+  margin-top: 4px;
   font-size: 0.9rem;
 }
 
-/* Student Name and Back to Top, also uses nav class from header */
-
-.footernav {
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
-
-
 .fnavlist {
-  border-top: #525252 dashed 1px;
-  display: flex;
-  flex-wrap: nowrap; /* should make it so they stay on one line */
-  justify-content: space-between;
-  font-weight: 700;
   
-  text-align: justify;
+  font-weight: 700;
   list-style-type: none;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 0;
+  flex: 1;
+  text-align: right; /*the only thing making 'back to top' go almost to the right */
+
 
 }
+
+
+.fnavlist li {
+  display: inline-block;
+  background: #f5f4f4;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 0.9rem;
+
+}
+
+.backtotop { /* FNAV LIST ITEM mobile only footer nav */
+  margin: 0;
+ }
+
+
+
+.full { /* FNAV LISTE ITEM full screen footer nav gets hidden on mobile */
+  display: none;
+}
+
+
+/* link styles */
 
 .fnavlist a {
   padding: 0;
@@ -191,8 +233,6 @@ footer {
   text-transform: uppercase;
   text-decoration: none;
   transition: all .5s;
-  
-  
 
 }
 
@@ -203,19 +243,6 @@ footer {
 
 
 
-/* makes the name on the left and the rest of the content to the right to fill
-the page */
-
-.nav .name {
-  display: block;
-  margin-right: auto;
-}
-
-/* hide larger screen nav */
-
-.tabfooter {
-  display: none;
-}
 
 
 
@@ -315,7 +342,7 @@ h3 {
 
 
 
-  .flexrow { /* main flexbox for content */
+  .flexbox-main { /* main flexbox for content */
     display: flex;
     flex-wrap: wrap;
       
@@ -324,9 +351,9 @@ h3 {
 
   }
 
-  .projects { /* each item in the flexrow flexbox */
+  .projects { /* each item in the flexbox-main flexbox */
     flex-wrap: wrap;
-    flex-basis: 45%; 
+    width: calc(50% - 20px);
     margin: auto;
   }
 
@@ -371,23 +398,32 @@ h3 {
 
   .fnavlist {
     margin: 0;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%; /* this makes the bottom nav stretch the width */
+    text-align: right;
+    border: none; /* gets rid of overlapping border */
   
   }
 
-.footernav {
+.flexbox-footer-nav {
   display: flex;
   flex-direction: row;
-  
-  justify-content: space-around;
+  border-top: #525252 dashed 1px;
+  justify-content: center;
   margin: 0 auto;
+  padding: 20px;
 
 
 }
 .name {
-  margin-right: auto;
+  margin-left: auto;
+  float: left;
   width: 100%;
+  padding-top: 32px;
+  padding-left: 0;
+  font-size: 0.9rem;
+  flex-grow: 2;
+  
 
 }
 
@@ -395,9 +431,12 @@ h3 {
   display: none;
 
 }
-.tabfooter { /* New nav with Home Portfolio Contact Skills gets shown */
+.full { /* New nav with Home Portfolio Contact Skills gets shown */
   display: flex;
-  width: 100%;
+  
+  padding: 10px;
+  margin: 20px;
+  
   
 
 }
@@ -405,7 +444,120 @@ h3 {
 
 
 }
+/*
+=============================================================================================================
+*/
 
-/* 1024 Wide Screens */
+/* --------------------------- 1024 Wide Screens */
+
+@media screen and (min-width: 1024px){
+
+  /* Navigation is horizontal on one line */
+
+    /* make nav list horizontal */
+    
+    .main-nav, .nav{
+      flex-direction: row;
+      display: inline-flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      background: #f5f4f4;
+      border: none;
+      justify-content: space-between;
+      padding-top: 0;
+      
+    }
+    .name {
+      margin: 4px;
+      text-align: left;
+      font-size: 0.9rem;
+      padding: 32px;
+      padding-top: 16px;
+      font-size: 1.5rem;
+    }
+
+   
+
+  /* Header About Me and Image to match tablet form */
+
+    /*------Header flexbox for profile image and paragraph about me */
+
+.flexboxhead {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse; /* reverses header image and p */
+  
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start; /* fills box vertically */
+  align-content: center;
+  padding: 0 20px;
+  
+  
+}
+
+.flexboxhead-item {
+flex-wrap: nowrap;
+flex-basis: 50%;
+
+text-align: left;
+
+margin: 0;
+border: 0;
+
+
+}
+
+.header-image {
+max-width: auto;
+max-height: 250px;
+padding: 2px 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+
+}
+
+  /* Portfolio is 3 columns wide */
+
+
+    /* --------main articles are in a grid that are 3 sections wide */
+
+
+
+    .flexbox-main { /* main flexbox for content */
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+  
+    }
+  
+    .projects { /* each item in the flexbox-main flexbox */
+      flex-wrap: wrap;
+      width: calc(33.333% - 20px);
+      margin: auto;
+    }
+  
+    .projects img {
+      max-width: 30vw;
+    }
+
+
+  /* footer nav matches top nav layout (one line)*/
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+}
 
 /* Printer-Friendly Version */

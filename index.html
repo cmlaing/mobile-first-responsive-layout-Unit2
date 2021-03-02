@@ -3,11 +3,16 @@
 <head>
     <title> Responsive Layout Website Project </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
@@ -16,9 +21,12 @@
 <div class="wrapper">
 
     <header>
-            <h2> Crystal Laing </h2>
+
+        <section class="main-nav">
+            <h2 class="name"> Crystal Laing </h2>
             <nav> 
                 <ul class="nav">
+                    
                     <li><a href="#top">Home</a></li> 
                     <li><a href="#portfolio">Portfolio</a></li> 
                     <li><a href="#skills">Skills</a></li> 
@@ -26,6 +34,7 @@
             
                 </ul>
             </nav>
+        </section>
             <br>
 
         <section class="flexboxhead">
@@ -47,7 +56,7 @@
             <section id="portfolio">
                 <h3> Portfolio</h3> <br>
 
-                <div class="flexrow">
+                <div class="flexbox-main">
 
 
 
@@ -157,14 +166,16 @@
                 <p class="contactinfo">Email <strong>email@yoursite.com</strong></p>
             </section>
         </div>
-            <nav class="footernav">
+            <nav class="flexbox-footer-nav">
+                <br>
+                <h2 class="fname">Crystal Laing</h2>
                     <ul class="fnavlist">
-                        <li class="name">Crystal Laing </li>
+                       
                         <li><a href="#top" class="backtotop">Back to Top</a></li>
-                        <li><a href="#top" class="tabfooter">Home</a></li>
-                        <li><a href="#portfolio" class="tabfooter">Portfolio</a></li>
-                        <li><a href="#skills" class="tabfooter">Skills</a></li>
-                        <li><a href="#contact" class="tabfooter">Contact</a></li>
+                        <li><a href="#top" class="full">Home</a></li>
+                        <li><a href="#portfolio" class="full">Portfolio</a></li>
+                        <li><a href="#skills" class="full">Skills</a></li>
+                        <li><a href="#contact" class="full">Contact</a></li>
 
                     </ul>
             </nav>
